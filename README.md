@@ -27,12 +27,12 @@ A clean, minimal meal planner for your week. Built with React Native and Expo.
 
 ## Tech Stack
 
-| Layer | Tool |
-|-------|------|
-| Framework | React Native |
-| Platform | Expo (Expo Router) |
-| Storage | AsyncStorage |
-| Build | EAS Build |
+| Layer     | Tool               |
+| --------- | ------------------ |
+| Framework | React Native       |
+| Platform  | Expo (Expo Router) |
+| Storage   | AsyncStorage       |
+| Build     | EAS Build          |
 
 ---
 
