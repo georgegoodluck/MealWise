@@ -1,17 +1,21 @@
-import React, { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import {
-  View, FlatList, TouchableOpacity,
-  Text, StyleSheet, SafeAreaView, StatusBar,
+  FlatList,
+  SafeAreaView, StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
-import { useMeals }       from '../hooks/useMeals';
-import { useModal }       from '../hooks/useModal';
-import { Header }         from '../components/Header';
-import { DayStrip }       from '../components/DayStrip';
-import { MealGroup }      from '../components/MealGroup';
-import { EmptyState }     from '../components/EmptyState';
-import { AddMealSheet }   from '../components/AddMealSheet';
-import { COLORS, DAYS, MEAL_TYPES, SPACING, RADIUS } from '../constants/theme';
+import { AddMealSheet } from '../components/AddMealSheet';
+import { DayStrip } from '../components/DayStrip';
+import { EmptyState } from '../components/EmptyState';
+import { Header } from '../components/Header';
+import { MealGroup } from '../components/MealGroup';
+import { COLORS, DAYS, MEAL_TYPES, RADIUS, SPACING } from '../constants/theme';
+import { useMeals } from '../hooks/useMeals';
+import { useModal } from '../hooks/useModal';
 
 // Today mapped to our Mon-based index (0=Mon … 6=Sun)
 const getTodayIndex = () => {
@@ -55,6 +59,7 @@ export default function HomeScreen() {
         activeDay={activeDay}
         onSelectDay={setActiveDay}
         getCountForDay={getCountForDay}
+        getMealsForDay={getMealsForDay}
         todayIndex={todayIndex}
       />
 
